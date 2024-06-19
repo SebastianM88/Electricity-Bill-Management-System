@@ -27,10 +27,10 @@ public class Project extends JFrame implements ActionListener {
         /* We will create a JMenuBar and a few JMenus and JMenuItems that will represent the buttons
         that will direct us towards the functionality of the project */
         JMenuBar mb = new JMenuBar();
-        JMenu master = new JMenu("Master");
+        JMenu admin = new JMenu("Admin");
         JMenuItem m1 = new JMenuItem("New Customer");
         JMenuItem m2 = new JMenuItem("Customer Details");
-        master.setForeground(Color.BLACK);
+        admin.setForeground(Color.BLACK);
 
         // We set the font, icon, mnemonics, accelerator and background color for the menu item 'New Customer
        m1.setFont(new Font("monospaced",Font.PLAIN,12));
@@ -57,26 +57,26 @@ public class Project extends JFrame implements ActionListener {
         /* We will create a JMenu and a few JMenuItems that will represent the buttons
         that will direct us towards the functionality of the project */
         JMenu user = new JMenu("User");
-        JMenuItem u1 = new JMenuItem("Pay Bill");
-        JMenuItem u2 = new JMenuItem("Calculate Bill");
+        JMenuItem u1 = new JMenuItem("Calculate Bill");
+        JMenuItem u2 = new JMenuItem("Pay Bill");
         JMenuItem u3 = new JMenuItem("Last Bill");
         user.setBackground(Color.BLACK);
 
         // We set the font, icon, mnemonics, accelerator and background color for the menu item 'Pay Bill'
         u1.setFont(new Font("monospaced",Font.PLAIN,12));
-        ImageIcon icon4 = new ImageIcon(ClassLoader.getSystemResource("images/icon4.png"));
+        ImageIcon icon4 = new ImageIcon(ClassLoader.getSystemResource("images/icon5.png"));
         Image image4 = icon4.getImage().getScaledInstance(20,20,Image.SCALE_DEFAULT);
         u1.setIcon(new ImageIcon(image4));
-        u1.setMnemonic('P');
+        u1.setMnemonic('B');
         u1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, ActionEvent.CTRL_MASK));
         u1.setBackground(Color.WHITE);
 
         // We set the font, icon, mnemonics, accelerator and background color for the menu item 'Calculate Bill'
         u2.setFont(new Font("monospaced", Font.BOLD,12));
-        ImageIcon icon5 = new ImageIcon(ClassLoader.getSystemResource("images/icon5.png"));
+        ImageIcon icon5 = new ImageIcon(ClassLoader.getSystemResource("images/icon4.png"));
         Image image5 = icon5.getImage().getScaledInstance(20,20,Image.SCALE_DEFAULT);
         u2.setIcon(new ImageIcon(image5));
-        u2.setMnemonic('B');
+        u2.setMnemonic('P');
         u2.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_D, ActionEvent.CTRL_MASK));
         u2.setBackground(Color.WHITE);
 
@@ -118,11 +118,11 @@ public class Project extends JFrame implements ActionListener {
 
         /* We will create a JMenu and a few JMenuItems that will represent the buttons
         that will direct us towards the functionality of the project */
-        JMenu utility = new JMenu("Utility");
+        JMenu tools = new JMenu("Tools");
         JMenuItem utr1 = new JMenuItem("Notepad");
         JMenuItem utr2 = new JMenuItem("Calculator");
         JMenuItem utr3 = new JMenuItem("Web Browser");
-        utility.setForeground(Color.BLACK);
+        tools.setForeground(Color.BLACK);
 
         // We set the font, icon, mnemonics, accelerator and background color for the menu item 'Notepad'
         utr1.setFont(new Font("monospaced", Font.BOLD,12));
@@ -179,8 +179,8 @@ public class Project extends JFrame implements ActionListener {
         // --------------------------------------- //
 
         // Code to add each button to the menu to which it belongs
-        master.add(m1);
-        master.add(m2);
+        admin.add(m1);
+        admin.add(m2);
 
         // Code to add each button to the menu to which it belongs
         user.add(u1);
@@ -191,18 +191,18 @@ public class Project extends JFrame implements ActionListener {
         report.add(r1);
 
         // Code to add each button to the menu to which it belongs
-        utility.add(utr1);
-        utility.add(utr2);
-        utility.add(utr3);
+        tools.add(utr1);
+        tools.add(utr2);
+        tools.add(utr3);
 
         // Code to add each button to the menu to which it belongs
         exit.add(ex);
 
         // Code to add each menu to the menu bar that contains all of them
-        mb.add(master);
+        mb.add(admin);
         mb.add(user);
         mb.add(report);
-        mb.add(utility);
+        mb.add(tools);
         mb.add(exit);
 
         // Menu bar that contains all our menus
