@@ -31,4 +31,4 @@ The database consists of 4 tables with its variables such as:
 - bill table ( meter_number, units, month, amount )
 - tax table ( meter_location, meter_type, phase_code, bill_type, days, meter_rent, mcb_rent, service_rent, gts)
 
-![main](https://github.com/SebastianM88/Electricity-Bill-Management-System/assets/162304856/8d3672ec-9567-4d78-8d84-a97e9a0f339d)
+
