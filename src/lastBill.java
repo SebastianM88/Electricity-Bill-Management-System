@@ -5,8 +5,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
+// The lastBill class extends JFrame and implements ActionListener to respond to button actions
 public class lastBill extends JFrame implements ActionListener {
 
+    // Define variables for the graphical interface elements
     JLabel l1;
     JTextArea t1;
     JButton b1;
@@ -14,17 +16,21 @@ public class lastBill extends JFrame implements ActionListener {
 
     Choice c1;
 
+    // The constructor of the lastBill class
     lastBill() {
 
+        // Set the basic properties of the window
         setSize(500,405);
         setLayout(new BorderLayout());
 
+        // We create the JPanel interface
         p1 = new JPanel();
 
+        // We create the label that will contain the cursor title
         l1 = new JLabel("Generate Bill");
 
+        // The code specific to the Cursor Variants from which we choose
         c1 = new Choice();
-
         c1.add("1");
         c1.add("2");
         c1.add("3");
@@ -36,22 +42,28 @@ public class lastBill extends JFrame implements ActionListener {
         c1.add("9");
         c1.add("10");
 
+        // We set our button to scroll on the interface and set its size and font
         t1 = new JTextArea(50,15);
         JScrollPane jsp = new JScrollPane(t1);
         t1.setFont(new Font("Sanserif",Font.ITALIC,18 ));
 
+        // We create the button that will print the result and assign a name
         b1 = new JButton("Generate Bill");
 
+        // We add the cursor and the name of its label to the panel
         p1.add(l1);
         p1.add(c1);
 
+        // We assign an exact position of JScrollPane, our panel and our button
+        add(jsp, "Center");
         add(p1, "North");
         add(b1, "South");
 
+        // Add action function for our button
         b1.addActionListener(this);
 
+        // Set the location of the panel
         setLocation(350,40);
-
     }
 
     // The actionPerformed method that is called when an action occurs (in this case, when a button is pressed)
