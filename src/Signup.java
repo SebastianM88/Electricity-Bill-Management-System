@@ -86,7 +86,7 @@ public class Signup extends JFrame implements ActionListener {
         new 'Customer' in the database when the field loses focus */
         meter.addFocusListener(new FocusListener() {
 
-            // Nu facem nimic când câmpul 'meter' câștigă focusul
+            // We do nothing when the 'meter' field wins the focus
             @Override
             public void focusGained(FocusEvent fe) {
             }
